@@ -11,7 +11,7 @@ app.get('/non-blocking', (req, res) => {
 app.get('/blocking', async (req, res) => {
 
     performBlockingOperation().then(counter => {
-        res.send(`It is the non-blocking thread. Counter: ${counter}`);
+        res.send(`It is the blocking thread. Counter: ${counter}`);
     });
 
 });
